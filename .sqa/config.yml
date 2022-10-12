@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/RECETOX/recetox-aplcms:
+      branch: master
+      repo: https://github.com/RECETOX/recetox-aplcms
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/RECETOX/recetox-aplcms git:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-rust-cheetah.sh
+        container: qc.acc_zippy-cinnabar-bear
+  QC.Doc:
+    repos:
+      github.com/RECETOX/recetox-aplcms find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-beige-salamander.sh
+        container: qc.doc_cheeky-firebrick-rat
+      github.com/RECETOX/recetox-aplcms git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-ivory-abyssinian.sh
+        container: qc.doc_skanky-charcoal-fossa
+      github.com/RECETOX/recetox-aplcms markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-indigo-jackal.sh
+        container: qc.doc_tacky-amber-okapi
+  QC.Lic:
+    repos:
+      github.com/RECETOX/recetox-aplcms licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-fuchsia-cheetah.sh
+        container: qc.lic_bumpy-asparagus-pig
+  QC.Sty:
+    repos:
+      github.com/RECETOX/recetox-aplcms hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-olive-reindeer.sh
+        container: qc.sty_gamy-amber-snail
+      github.com/RECETOX/recetox-aplcms jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-amaranth-chin.sh
+        container: qc.sty_wimpy-beige-uakari
+  QC.Ver:
+    repos:
+      github.com/RECETOX/recetox-aplcms get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-thistle-dollar.sh
+        container: qc.ver_wheezy-pink-newfoundland
+timeout: 1800
