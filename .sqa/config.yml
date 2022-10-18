@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/RECETOX/recetox-aplcms git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-rust-cheetah.sh
-        container: qc.acc_zippy-cinnabar-bear
+        - /usr/bin/env sh .sqa/script.cranky-russet-audemer.sh
+        container: qc.acc_bluesy-ultramarine-numbat
   QC.Doc:
     repos:
       github.com/RECETOX/recetox-aplcms find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-beige-salamander.sh
-        container: qc.doc_cheeky-firebrick-rat
+        - /usr/bin/env sh .sqa/script.gimpy-grey-emu.sh
+        container: qc.doc_wimpy-tangerine-tuatara
       github.com/RECETOX/recetox-aplcms git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-ivory-abyssinian.sh
-        container: qc.doc_skanky-charcoal-fossa
+        - /usr/bin/env sh .sqa/script.flaky-mauve-mole.sh
+        container: qc.doc_slaphappy-russet-discus
       github.com/RECETOX/recetox-aplcms markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-indigo-jackal.sh
-        container: qc.doc_tacky-amber-okapi
+        - /usr/bin/env sh .sqa/script.slimy-cerulean-okapi.sh
+        container: qc.doc_woolly-chartreuse-burmese
   QC.Lic:
     repos:
       github.com/RECETOX/recetox-aplcms licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-fuchsia-cheetah.sh
-        container: qc.lic_bumpy-asparagus-pig
+        - /usr/bin/env sh .sqa/script.woozy-vermilion-eagle.sh
+        container: qc.lic_gloppy-flax-hamster
   QC.Sty:
     repos:
       github.com/RECETOX/recetox-aplcms hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-olive-reindeer.sh
-        container: qc.sty_gamy-amber-snail
+        - /usr/bin/env sh .sqa/script.slaphappy-magenta-millipede.sh
+        container: qc.sty_ugly-chartreuse-echidna
       github.com/RECETOX/recetox-aplcms jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-amaranth-chin.sh
-        container: qc.sty_wimpy-beige-uakari
+        - /usr/bin/env sh .sqa/script.skinny-apricot-cow.sh
+        container: qc.sty_lumpy-viridian-turtle
   QC.Ver:
     repos:
       github.com/RECETOX/recetox-aplcms get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-thistle-dollar.sh
-        container: qc.ver_wheezy-pink-newfoundland
+        - /usr/bin/env sh .sqa/script.shaky-razzmatazz-rattlesnake.sh
+        container: qc.ver_snazzy-burgundy-vole
 timeout: 1800
