@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.4
+      branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/RECETOX/recetox-aplcms:
       branch: master
@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/RECETOX/recetox-aplcms git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-russet-audemer.sh
-        container: qc.acc_bluesy-ultramarine-numbat
+        - /usr/bin/env sh .sqa/script.droopy-wisteria-urchin.sh
+        container: qc.acc_randy-cardinal-squid
   QC.Doc:
     repos:
       github.com/RECETOX/recetox-aplcms find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-grey-emu.sh
-        container: qc.doc_wimpy-tangerine-tuatara
+        - /usr/bin/env sh .sqa/script.randy-ruby-rat.sh
+        container: qc.doc_freaky-white-akita
       github.com/RECETOX/recetox-aplcms git:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-mauve-mole.sh
-        container: qc.doc_slaphappy-russet-discus
+        - /usr/bin/env sh .sqa/script.leaky-malachite-abyssinian.sh
+        container: qc.doc_goopy-wisteria-worm
       github.com/RECETOX/recetox-aplcms markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cerulean-okapi.sh
-        container: qc.doc_woolly-chartreuse-burmese
+        - /usr/bin/env sh .sqa/script.hilly-khaki-lynx.sh
+        container: qc.doc_homely-platinum-lizard
   QC.Lic:
     repos:
       github.com/RECETOX/recetox-aplcms licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-vermilion-eagle.sh
-        container: qc.lic_gloppy-flax-hamster
+        - /usr/bin/env sh .sqa/script.crabby-charcoal-dog.sh
+        container: qc.lic_nerdy-teal-binturong
   QC.Sty:
     repos:
       github.com/RECETOX/recetox-aplcms hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-magenta-millipede.sh
-        container: qc.sty_ugly-chartreuse-echidna
+        - /usr/bin/env sh .sqa/script.gloppy-tan-hummingbird.sh
+        container: qc.sty_flimsy-dandelion-dormouse
       github.com/RECETOX/recetox-aplcms jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-apricot-cow.sh
-        container: qc.sty_lumpy-viridian-turtle
+        - /usr/bin/env sh .sqa/script.jumpy-plum-chinook.sh
+        container: qc.sty_skinny-lime-wolfhound
   QC.Ver:
     repos:
       github.com/RECETOX/recetox-aplcms get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-razzmatazz-rattlesnake.sh
-        container: qc.ver_snazzy-burgundy-vole
+        - /usr/bin/env sh .sqa/script.snippy-razzmatazz-shrimp.sh
+        container: qc.ver_paltry-bistre-flounder
 timeout: 1800
